@@ -1,0 +1,6 @@
+<svg width="160" height="30" viewBox="0 0 160 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="30" height="30" rx="6" fill="#0070F3"/>
+  <path d="M8 15C8 15 12 8 15 8C18 8 22 15 22 15C22 15 18 22 15 22C12 22 8 15 8 15Z" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <circle cx="15" cy="15" r="3" fill="white"/>
+  <text x="40" y="22" font-family="Arial" font-weight="bold" font-size="16" fill="#333">OCEAN WATCH</text>
+</svg>

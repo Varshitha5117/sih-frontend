@@ -1,0 +1,167 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a2342" />
+      <stop offset="100%" stop-color="#0e4166" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#skyGradient)" />
+  
+  <!-- Clouds -->
+  <path d="M100 100 Q 130 80, 160 100 Q 180 80, 200 90 Q 230 70, 260 90 Q 280 80, 300 100" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.7" />
+  <path d="M120 110 Q 150 90, 180 110 Q 200 90, 220 100 Q 250 80, 280 100 Q 300 90, 320 110" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.7" />
+  <path d="M700 120 Q 730 100, 760 120 Q 780 100, 800 110 Q 830 90, 860 110 Q 880 100, 900 120" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.7" />
+  <path d="M720 130 Q 750 110, 780 130 Q 800 110, 820 120 Q 850 100, 880 120 Q 900 110, 920 130" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.7" />
+  
+  <!-- Ocean -->
+  <rect x="0" y="300" width="1200" height="500" fill="#0c3658" opacity="0.5" />
+  
+  <!-- Distant islands -->
+  <path d="M50 300 Q 100 280, 150 300" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.5" />
+  <path d="M200 300 Q 250 270, 300 300" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.5" />
+  
+  <!-- Coastal cliff -->
+  <path d="M600 300 Q 650 200, 700 220 Q 750 240, 800 200 Q 850 180, 900 220 Q 950 260, 1000 240 Q 1050 220, 1100 260 Q 1150 300, 1200 280 L 1200 500 L 600 500 Z" fill="#ffffff" opacity="0.1" stroke="#ffffff" stroke-width="1" />
+  
+  <!-- Village on cliff - detailed houses -->
+  <g stroke="#ffffff" stroke-width="1" opacity="0.9" fill="none">
+    <!-- Houses row 1 (higher on cliff) -->
+    <rect x="700" y="220" width="20" height="15" />
+    <polygon points="700,220 720,220 710,210" />
+    <line x1="705" y1="220" x2="705" y2="235" />
+    <line x1="715" y1="220" x2="715" y2="235" />
+    
+    <rect x="730" y="210" width="25" height="20" />
+    <polygon points="730,210 755,210 742.5,195" />
+    <rect x="738" y="220" width="8" height="10" />
+    
+    <rect x="770" y="200" width="30" height="25" />
+    <polygon points="770,200 800,200 785,185" />
+    <rect x="780" y="215" width="10" height="10" />
+    
+    <rect x="810" y="215" width="22" height="18" />
+    <polygon points="810,215 832,215 821,200" />
+    
+    <rect x="845" y="205" width="28" height="22" />
+    <polygon points="845,205 873,205 859,190" />
+    <line x1="859" y1="205" x2="859" y2="227" />
+    
+    <!-- Houses row 2 (middle of cliff) -->
+    <rect x="680" y="250" width="22" height="18" />
+    <polygon points="680,250 702,250 691,235" />
+    
+    <rect x="715" y="245" width="25" height="20" />
+    <polygon points="715,245 740,245 727.5,230" />
+    <rect x="723" y="255" width="8" height="10" />
+    
+    <rect x="755" y="240" width="30" height="25" />
+    <polygon points="755,240 785,240 770,225" />
+    <rect x="765" y="250" width="10" height="15" />
+    
+    <rect x="800" y="250" width="28" height="22" />
+    <polygon points="800,250 828,250 814,235" />
+    
+    <rect x="840" y="245" width="32" height="26" />
+    <polygon points="840,245 872,245 856,225" />
+    <rect x="850" y="255" width="12" height="16" />
+    
+    <rect x="885" y="255" width="24" height="20" />
+    <polygon points="885,255 909,255 897,240" />
+    
+    <!-- Houses row 3 (lower on cliff) -->
+    <rect x="670" y="285" width="24" height="20" />
+    <polygon points="670,285 694,285 682,270" />
+    <rect x="678" y="295" width="8" height="10" />
+    
+    <rect x="705" y="280" width="28" height="22" />
+    <polygon points="705,280 733,280 719,265" />
+    
+    <rect x="745" y="290" width="32" height="26" />
+    <polygon points="745,290 777,290 761,270" />
+    <rect x="755" y="300" width="12" height="16" />
+    
+    <rect x="790" y="285" width="30" height="25" />
+    <polygon points="790,285 820,285 805,270" />
+    
+    <rect x="835" y="295" width="26" height="21" />
+    <polygon points="835,295 861,295 848,280" />
+    <rect x="843" y="305" width="10" height="11" />
+    
+    <rect x="875" y="290" width="34" height="28" />
+    <polygon points="875,290 909,290 892,270" />
+    <rect x="885" y="300" width="14" height="18" />
+  </g>
+  
+  <!-- Palm trees on cliff -->
+  <g stroke="#ffffff" stroke-width="1" opacity="0.8" fill="none">
+    <!-- Tree 1 -->
+    <line x1="650" y1="230" x2="650" y2="250" />
+    <path d="M650 230 C 645 220, 640 215, 635 225 C 630 215, 625 220, 630 230 C 620 225, 615 230, 625 235 C 615 240, 620 245, 630 240 C 625 250, 630 255, 635 245 C 640 255, 645 250, 640 240 C 650 245, 655 240, 645 235 C 655 230, 650 225, 640 230" />
+    
+    <!-- Tree 2 -->
+    <line x1="920" y1="240" x2="920" y2="260" />
+    <path d="M920 240 C 915 230, 910 225, 905 235 C 900 225, 895 230, 900 240 C 890 235, 885 240, 895 245 C 885 250, 890 255, 900 250 C 895 260, 900 265, 905 255 C 910 265, 915 260, 910 250 C 920 255, 925 250, 915 245 C 925 240, 920 235, 910 240" />
+    
+    <!-- Tree 3 -->
+    <line x1="980" y1="260" x2="980" y2="280" />
+    <path d="M980 260 C 975 250, 970 245, 965 255 C 960 245, 955 250, 960 260 C 950 255, 945 260, 955 265 C 945 270, 950 275, 960 270 C 955 280, 960 285, 965 275 C 970 285, 975 280, 970 270 C 980 275, 985 270, 975 265 C 985 260, 980 255, 970 260" />
+  </g>
+  
+  <!-- Beach -->
+  <path d="M0 500 Q 100 480, 200 490 Q 300 500, 400 480 Q 500 470, 600 500" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.7" />
+  
+  <!-- Boats with people -->
+  <g stroke="#ffffff" stroke-width="1" opacity="0.9" fill="none">
+    <!-- Boat 1 -->
+    <path d="M200 520 Q 220 510, 240 520 L 240 530 L 200 530 Z" />
+    <line x1="215" y1="500" x2="215" y2="520" />
+    <path d="M217 500 Q 230 510, 217 520" />
+    <!-- Person in boat 1 -->
+    <circle cx="210" cy="525" r="3" />
+    <line x1="210" y1="525" x2="210" y2="530" />
+    <circle cx="230" cy="525" r="3" />
+    <line x1="230" y1="525" x2="230" y2="530" />
+    
+    <!-- Boat 2 -->
+    <path d="M350 540 Q 370 530, 390 540 L 390 550 L 350 550 Z" />
+    <line x1="365" y1="520" x2="365" y2="540" />
+    <path d="M367 520 Q 380 530, 367 540" />
+    <!-- People in boat 2 -->
+    <circle cx="360" cy="545" r="3" />
+    <line x1="360" y1="545" x2="360" y2="550" />
+    <circle cx="380" cy="545" r="3" />
+    <line x1="380" y1="545" x2="380" y2="550" />
+    
+    <!-- Boat 3 with sail -->
+    <path d="M100 560 Q 120 550, 140 560 L 140 570 L 100 570 Z" />
+    <line x1="115" y1="540" x2="115" y2="560" />
+    <path d="M115 540 Q 135 550, 115 560" />
+    <!-- Person in boat 3 -->
+    <circle cx="120" cy="565" r="3" />
+    
+    <!-- Boat 4 -->
+    <path d="M500 530 Q 520 520, 540 530 L 540 540 L 500 540 Z" />
+    <line x1="515" y1="510" x2="515" y2="530" />
+    <path d="M517 510 Q 530 520, 517 530" />
+    <!-- People in boat 4 -->
+    <circle cx="510" cy="535" r="3" />
+    <line x1="510" y1="535" x2="510" y2="540" />
+    <circle cx="530" cy="535" r="3" />
+    <line x1="530" y1="535" x2="530" y2="540" />
+  </g>
+  
+  <!-- Ocean waves -->
+  <path d="M0 550 Q 100 540, 200 550 Q 300 540, 400 550 Q 500 540, 600 550 Q 700 540, 800 550 Q 900 540, 1000 550 Q 1100 540, 1200 550" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.5" />
+  <path d="M0 580 Q 100 570, 200 580 Q 300 570, 400 580 Q 500 570, 600 580 Q 700 570, 800 580 Q 900 570, 1000 580 Q 1100 570, 1200 580" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.4" />
+  <path d="M0 610 Q 100 600, 200 610 Q 300 600, 400 610 Q 500 600, 600 610 Q 700 600, 800 610 Q 900 600, 1000 610 Q 1100 600, 1200 610" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.3" />
+  
+  <!-- Birds -->
+  <g stroke="#ffffff" stroke-width="1" opacity="0.7" fill="none">
+    <path d="M150 150 Q 155 145, 160 150 Q 165 145, 170 150" />
+    <path d="M250 120 Q 255 115, 260 120 Q 265 115, 270 120" />
+    <path d="M350 160 Q 355 155, 360 160 Q 365 155, 370 160" />
+  </g>
+</svg>
