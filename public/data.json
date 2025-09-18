@@ -1,0 +1,47 @@
+[
+  {
+    "id": "1",
+    "disasterType": "Tsunami",
+    "description": "High tsunami warning issued for coastal areas. Expected wave height: 3-5 meters. Immediate evacuation required.",
+    "location": "Chennai, Tamil Nadu",
+    "timestamp": "2025-09-12T08:30:00Z",
+    "intensity": "High",
+    "image": "/coastal-village-illustration.jpg"
+  },
+  {
+    "id": "2",
+    "disasterType": "Cyclone",
+    "description": "Cyclone Vardah approaching with wind speeds of 120-140 km/h. Heavy rainfall expected. Take necessary precautions.",
+    "location": "Visakhapatnam, Andhra Pradesh",
+    "timestamp": "2025-09-11T14:45:00Z",
+    "intensity": "Medium",
+    "image": "/ocean-background.svg"
+  },
+  {
+    "id": "3",
+    "disasterType": "Flood",
+    "description": "Severe flooding reported in low-lying areas. Water level rising at 10cm/hour. Move to higher ground immediately.",
+    "location": "Kochi, Kerala",
+    "timestamp": "2025-09-10T19:15:00Z",
+    "intensity": "High",
+    "image": "/coastal-village.svg"
+  },
+  {
+    "id": "4",
+    "disasterType": "Oil Spill",
+    "description": "Major oil spill detected 5km offshore. Approximately 1000 gallons leaked. Cleanup operations underway.",
+    "location": "Mumbai, Maharashtra",
+    "timestamp": "2025-09-09T11:20:00Z",
+    "intensity": "Medium",
+    "image": "/ocean-background.svg"
+  },
+  {
+    "id": "5",
+    "disasterType": "Storm Surge",
+    "description": "Storm surge warning for coastal regions. Expected surge height: 2-3 meters above normal tide levels.",
+    "location": "Puducherry",
+    "timestamp": "2025-09-08T22:10:00Z",
+    "intensity": "Low",
+    "image": "/coastal-village-illustration.jpg"
+  }
+]

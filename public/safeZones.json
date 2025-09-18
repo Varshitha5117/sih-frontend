@@ -1,0 +1,57 @@
+[
+  {
+    "id": "1",
+    "name": "Chennai Central Relief Camp",
+    "location": "Chennai, Tamil Nadu",
+    "capacity": 500,
+    "facilities": ["Food", "Medical", "Shelter"],
+    "coordinates": {
+      "lat": 13.0827,
+      "lng": 80.2707
+    }
+  },
+  {
+    "id": "2",
+    "name": "Visakhapatnam Safe Zone",
+    "location": "Visakhapatnam, Andhra Pradesh",
+    "capacity": 350,
+    "facilities": ["Food", "Medical", "Shelter", "Communication"],
+    "coordinates": {
+      "lat": 17.6868,
+      "lng": 83.2185
+    }
+  },
+  {
+    "id": "3",
+    "name": "Kochi Emergency Shelter",
+    "location": "Kochi, Kerala",
+    "capacity": 400,
+    "facilities": ["Food", "Medical", "Shelter", "Communication", "Transportation"],
+    "coordinates": {
+      "lat": 9.9312,
+      "lng": 76.2673
+    }
+  },
+  {
+    "id": "4",
+    "name": "Mumbai Coastal Safety Center",
+    "location": "Mumbai, Maharashtra",
+    "capacity": 600,
+    "facilities": ["Food", "Medical", "Shelter", "Communication"],
+    "coordinates": {
+      "lat": 19.0760,
+      "lng": 72.8777
+    }
+  },
+  {
+    "id": "5",
+    "name": "Puducherry Relief Camp",
+    "location": "Puducherry",
+    "capacity": 250,
+    "facilities": ["Food", "Medical", "Shelter"],
+    "coordinates": {
+      "lat": 11.9416,
+      "lng": 79.8083
+    }
+  }
+]
