@@ -1,31 +1,16 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { getAuthToken, removeAuthToken } from '../../utils/api';
-import { logoutUser } from '../../services/authService';
-import { useErrorHandler } from '../../hooks/useErrorHandler';
 
 const Navbar = () => {
   const router = useRouter();
-  const { error, handleError, clearError } = useErrorHandler();
   const [searchQuery, setSearchQuery] = useState('');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  // For demo purposes only - no actual authentication
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [isLoggingOut, setIsLoggingOut] = useState(false);
-
-  // Check authentication status on component mount
-  useEffect(() => {
-    const checkAuth = () => {
-      const token = getAuthToken();
-      setIsAuthenticated(!!token);
-    };
-    
-    checkAuth();
-    // We could add an event listener for storage changes to detect login/logout in other tabs
-  }, []);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -33,18 +18,10 @@ const Navbar = () => {
     console.log('Searching for:', searchQuery);
   };
 
-  const handleLogout = async () => {
-    try {
-      setIsLoggingOut(true);
-      clearError();
-      await logoutUser();
-      setIsAuthenticated(false);
-      router.push('/login');
-    } catch (err) {
-      handleError(err);
-    } finally {
-      setIsLoggingOut(false);
-    }
+  const handleLogout = () => {
+    setIsAuthenticated(false);
+    // Static placeholder - just show an alert instead of redirecting
+    alert("Coming soon – frontend only");
   };
 
   return (
@@ -86,21 +63,14 @@ const Navbar = () => {
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center space-x-4">
-            {isAuthenticated && (
-              <>
-                <Link href="/upload" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                  Upload
-                </Link>
-                <Link href="/dashboard" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                  Dashboard
-                </Link>
-                <Link href="/profile" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                  Profile
-                </Link>
-              </>
-            )}
-            <Link href="/login" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-              Log In
+            <Link href="/" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+              Home
+            </Link>
+            <Link href="#" onClick={(e) => {e.preventDefault(); alert('Coming soon – frontend only')}} className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+              Raise Funds
+            </Link>
+            <Link href="/dashboard" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+              Dashboard
             </Link>
           </div>
 
@@ -109,10 +79,9 @@ const Navbar = () => {
             {isAuthenticated ? (
               <button 
                 onClick={handleLogout}
-                disabled={isLoggingOut}
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
-                {isLoggingOut ? 'Logging out...' : 'Log Out'}
+                Log Out
               </button>
             ) : (
               <>
@@ -153,19 +122,15 @@ const Navbar = () => {
       <div className={`md:hidden ${mobileMenuOpen ? 'block' : 'hidden'} bg-[#182128]`}>
         {/* Navigation Links */}
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          {isAuthenticated && (
-            <>
-              <Link href="/upload" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                Upload
-              </Link>
-              <Link href="/dashboard" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                Dashboard
-              </Link>
-              <Link href="/profile" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                Profile
-              </Link>
-            </>
-          )}
+          <Link href="/" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+            Home
+          </Link>
+          <Link href="#" onClick={(e) => {e.preventDefault(); alert('Coming soon – frontend only')}} className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+            Raise Funds
+          </Link>
+          <Link href="/dashboard" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+            Dashboard
+          </Link>
           <Link href="/login" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
             Log In
           </Link>
@@ -175,10 +140,9 @@ const Navbar = () => {
             {isAuthenticated ? (
               <button 
                 onClick={handleLogout}
-                disabled={isLoggingOut}
-                className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700"
               >
-                {isLoggingOut ? 'Logging out...' : 'Log Out'}
+                Log Out
               </button>
             ) : (
               <>
@@ -191,12 +155,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Error message display */}
-      {error && (
-        <div className="bg-red-500 text-white p-2 text-center">
-          {error}
-        </div>
-      )}
     </nav>
   );
 };
