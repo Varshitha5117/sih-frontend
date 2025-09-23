@@ -38,6 +38,7 @@ const Navbar = () => {
                 height={30} 
                 className="h-8 w-auto" 
               />
+              <span className="text-white font-semibold ml-2">OCEAN WATCH</span>
             </Link>
           </div>
 
